@@ -1,0 +1,68 @@
+/*
+  Approximate colors sampled from flat areas in screenshots/existing-reference/.
+  Most common exact pixel in each region. These are not official brand values.
+  Change colors here so the rest of the prototype can follow.
+
+  Sampled
+  - Header navy:        #142651
+  - Body text:          #0A1733
+  - Gold (banners, submit, telehealth panel): #F6C767
+  - Urgent Care button: #F4BB47
+  - Hero action cards:  #214897
+  - Schedule box:       #DEC8A0
+  - Teal headings and the appointments call button: #51ABDB
+  - "(Required)" label: #B1391F
+  - Page background:    #FFFFFF
+
+  Contrast of these pairs, so text is not placed on a failing combination.
+  Ratios are for the solid colors below, not for text sitting on a photograph.
+  - #142651 on #FFFFFF: 14.7:1
+  - #0A1733 on #FFFFFF: 17.8:1
+  - #0A1733 on #F6C767: 11.2:1
+  - #0A1733 on #F4BB47: 10.2:1
+  - #FFFFFF on #214897: 8.6:1
+  - #0A1733 on #DEC8A0: 10.9:1
+  - #B1391F on #FFFFFF: 6.0:1
+  - #51ABDB on #FFFFFF: 2.6:1, fails for text
+  - #FFFFFF on #51ABDB: 2.6:1, fails for text
+  - #F6C767 on #FFFFFF: 1.6:1, fails for text
+  - #FFFFFF on #F4BB47: 1.7:1, fails for text
+
+  Focus uses navy. A gold outline on white is about 1.6:1, under the 3:1
+  non-text contrast minimum.
+*/
+
+:root {
+  --color-navy: #142651;
+  --color-text: #0a1733;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-gold: #0a1733;
+  --color-gold: #f6c767;
+  --color-gold-urgent: #f4bb47;
+  --color-blue: #214897;
+  --color-teal: #51abdb;
+  --color-tan: #dec8a0;
+  --color-required: #b1391f;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #c4c7ce;
+  --color-focus: #142651;
+
+  --font-sans: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --size-touch: 44px;
+  --layout-design-width: 1280px;
+  --layout-page-max: 1120px;
+
+  --focus-width: 3px;
+  --focus-offset: 2px;
+}
