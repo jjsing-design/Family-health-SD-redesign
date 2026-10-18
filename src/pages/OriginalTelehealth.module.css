@@ -1,0 +1,252 @@
+.page {
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-lg) 6rem;
+  background: var(--color-page);
+  color: var(--color-text);
+}
+
+.sidebar {
+  align-self: start;
+}
+
+.sideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sideLink,
+.sideCurrent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--size-touch);
+  padding: 0 var(--space-sm);
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.sideLink {
+  border: 0;
+  border-left: 4px solid transparent;
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.sideCurrent {
+  border-left: 4px solid var(--color-gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sideNote,
+.portalNote {
+  margin: var(--space-sm) 0 0;
+}
+
+.title {
+  margin: 0 0 var(--space-lg);
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  background: var(--color-tan);
+  padding: var(--space-lg);
+}
+
+.scheduleTitle,
+.scheduleText {
+  margin: 0;
+}
+
+.scheduleText a,
+.linkButton {
+  color: var(--color-text);
+  text-underline-offset: 0.2em;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-touch);
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form {
+  max-width: 46rem;
+  margin-top: var(--space-xl);
+}
+
+.prototypeNote {
+  font-weight: 700;
+}
+
+.errorSummary,
+.fieldError {
+  color: var(--color-required);
+}
+
+.field {
+  margin-top: var(--space-md);
+}
+
+.field label,
+.datePart label,
+.legend,
+legend {
+  display: block;
+  font-weight: 700;
+  margin-bottom: var(--space-2xs);
+}
+
+.control {
+  width: 100%;
+  min-height: var(--size-touch);
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-page);
+}
+
+textarea.control {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.fieldset {
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.minor {
+  margin-top: var(--space-lg);
+}
+
+.short {
+  max-width: 8rem;
+}
+
+.dateRow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-xs);
+  max-width: 11rem;
+  overflow: hidden;
+}
+
+.datePart {
+  width: 4.5rem;
+  flex: 0 0 auto;
+}
+
+.dateInput {
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+
+.simulate {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: var(--size-touch);
+  margin-top: var(--space-lg);
+}
+
+.submit {
+  min-height: var(--size-touch);
+  margin-top: var(--space-md);
+  padding: 0 var(--space-xl);
+  border: 0;
+  background: var(--color-gold);
+  color: var(--color-text-on-gold);
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  cursor: wait;
+}
+
+.result {
+  margin-top: var(--space-xl);
+}
+
+.faq {
+  max-width: 46rem;
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.faqItem {
+  margin-top: var(--space-lg);
+}
+
+.faq h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.callChip {
+  position: fixed;
+  left: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-touch);
+  padding: 0 var(--space-md);
+  background: var(--color-navy);
+  color: var(--color-text-on-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+    padding-right: var(--space-md);
+    padding-left: var(--space-md);
+  }
+
+  .schedule,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .dateRow {
+    max-width: none;
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+}

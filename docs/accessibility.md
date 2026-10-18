@@ -26,6 +26,48 @@ Baseline for the prototype: real labels, keyboard access, a visible focus ring, 
 - The ZIP control, Go button, and service menu are at least 44px tall.
 - The service menu does not include telehealth.
 
+## Checked with the original services page
+
+- The telehealth phrase is a real link with an underline, so it is not identified by color alone. Gold on navy is about 9.3:1.
+- The phone number is a `tel` link. Both links use a 44px minimum height.
+- Focus on this navy page uses a gold ring.
+- The mask warning is white. The orange sampled from the screenshot is about 4.1:1 on navy, so it is not used for that sentence.
+- The photograph contrast hypothesis is still unchecked, because this page does not use a photograph.
+
+## Checked with the original telehealth page
+
+- Every input has a visible label, including Month, Day, and Year.
+- Required is written out, not shown by color alone. The required red on white is about 6:1.
+- Errors use `role="alert"`. The success message uses `role="status"` and says the request was received.
+- The heading is navy, not the sampled teal, because teal on white is about 2.6:1.
+- The floating call link is navy with white text, underlined, and 44px tall.
+- The current sidebar item is bold and has a gold bar, so the current page is not color alone.
+
+## Checked with the redesign home
+
+- Virtual visit is a link with an underline and a sentence, so it is not identified by the gold fill alone. Dark text on that gold is about 11:1.
+- Its focus ring is white, because the ring sits on the navy hero. White on navy is about 14.7:1.
+- Find a clinic and Find a service keep real labels. Their focus rings stay gold on the blue cards, about 5.5:1.
+- The event text stays dark on gold, about 11:1.
+
+## Checked with the redesign telehealth page
+
+- The page is one column with headings for How it works and Is telehealth right for you.
+- The steps are one numbered list, so the order is not announced twice.
+- The request action is a link with an underline. Dark text on gold is about 11:1. Its focus ring uses the navy outline on the white page.
+- Call and Use MyHealthRecord are separate text links, each at least 44px tall.
+- The 911 notice is written in words, not color alone.
+
+## Checked with the redesign request
+
+- Each control has a visible label. Required is written in the label.
+- Phone or video is a radio group. Days and times are checkbox groups.
+- The mobile phone help text is tied to the field with `aria-describedby`.
+- Errors are written next to the field and repeated in an alert that receives focus.
+- Date fields are separate Month, Day, and Year inputs, large enough to read, not the clipped pair from the original.
+- The confirmation says the request was received. It does not say the visit is booked.
+- The call link on the confirmation is at least 44px tall.
+
 ## Still to verify
 
 - A keyboard walk in a focused browser window. The focus rules are in the CSS, including the skip link appearing on focus. The check browser did not give the document focus, so the ring was not seen.

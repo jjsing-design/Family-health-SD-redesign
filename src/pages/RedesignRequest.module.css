@@ -1,0 +1,333 @@
+.page {
+  flex: 1;
+  background: var(--color-page);
+  color: var(--color-text);
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+}
+
+.form {
+  width: min(100%, 46rem);
+  margin: 0 auto;
+}
+
+.form h1 {
+  margin-bottom: var(--space-md);
+}
+
+.prototypeNote {
+  font-weight: 700;
+}
+
+.summary {
+  min-height: 1.5em;
+  margin: var(--space-md) 0 0;
+  font-weight: 700;
+  color: var(--color-required);
+}
+
+.summary:focus {
+  outline: none;
+}
+
+.summary:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.panel {
+  margin-top: var(--space-3xl);
+  padding: var(--space-xl);
+  background: var(--color-tan);
+  color: var(--color-text);
+}
+
+.panel h2,
+.prototypeStrip h2 {
+  margin: 0 0 var(--space-lg);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.fieldset {
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.panel .fieldset:first-of-type {
+  margin-top: 0;
+}
+
+.fieldset legend,
+.field label,
+.datePart label {
+  display: block;
+  float: none;
+  width: auto;
+  padding: 0;
+  margin: 0 0 var(--space-xs);
+  font-weight: 700;
+}
+
+.field {
+  margin-top: var(--space-lg);
+}
+
+.split .field {
+  margin-top: 0;
+}
+
+.visitCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.visitCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "radio title"
+    "radio hint"
+    "mark mark";
+  column-gap: var(--space-sm);
+  row-gap: var(--space-2xs);
+  align-items: start;
+  min-height: var(--size-touch);
+  padding: var(--space-md);
+  border: 2px solid var(--color-navy);
+  background: var(--color-page);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.visitCard:has(:checked) {
+  background: var(--color-gold);
+  color: var(--color-text-on-gold);
+}
+
+.visitCard:has(:focus-visible) {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.visitRadio {
+  grid-area: radio;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.15rem 0 0;
+  accent-color: var(--color-navy);
+}
+
+.visitRadio:focus {
+  outline: none;
+}
+
+.visitTitle {
+  grid-area: title;
+  font-weight: 700;
+}
+
+.visitHint {
+  grid-area: hint;
+}
+
+.selectedMark {
+  grid-area: mark;
+  min-height: 1.5em;
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: var(--size-touch);
+  padding: 0 var(--space-md);
+  border: 2px solid var(--color-navy);
+  background: var(--color-page);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.chip:has(:checked) {
+  background: var(--color-navy);
+  color: var(--color-text-on-dark);
+}
+
+.chip:has(:focus-visible) {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.chipInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.chipInput:focus {
+  outline: none;
+}
+
+.chipMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--color-navy);
+  background: var(--color-page);
+  color: var(--color-navy);
+  font-weight: 700;
+  flex: none;
+}
+
+.control {
+  width: 100%;
+  min-height: var(--size-touch);
+  padding: var(--space-xs) var(--space-sm);
+  border: 2px solid var(--color-navy);
+  font: inherit;
+  font-size: 1.125rem;
+  color: var(--color-text);
+  background: var(--color-page);
+}
+
+textarea.control {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.help,
+.minor {
+  margin-top: var(--space-xs);
+}
+
+.minor {
+  margin-top: var(--space-lg);
+}
+
+.fieldError {
+  display: inline-block;
+  margin: var(--space-xs) 0 0;
+  padding: var(--space-2xs) var(--space-xs);
+  background: var(--color-page);
+  color: var(--color-required);
+  font-weight: 700;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.dateRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.datePart {
+  width: 5.5rem;
+}
+
+.datePartWide {
+  width: 7rem;
+}
+
+.zipInput {
+  width: 8rem;
+}
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-3xl);
+}
+
+.next {
+  margin: 0;
+  max-width: 22rem;
+}
+
+.submit {
+  min-height: var(--size-touch);
+  padding: 0 var(--space-lg);
+  border: 0;
+  background: var(--color-gold);
+  color: var(--color-text-on-gold);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  flex: none;
+}
+
+.submit:disabled {
+  cursor: wait;
+}
+
+.prototypeStrip {
+  margin-top: var(--space-3xl);
+  padding: var(--space-lg);
+  border: 2px solid var(--color-navy);
+  background: var(--color-page);
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: var(--size-touch);
+}
+
+fieldset:disabled .visitCard,
+fieldset:disabled .chip {
+  cursor: default;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .panel {
+    padding: var(--space-lg);
+  }
+
+  .visitCards,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .submitRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .next {
+    max-width: none;
+  }
+}

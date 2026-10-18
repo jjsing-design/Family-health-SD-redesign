@@ -1,6 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import PrototypeLayout from './components/PrototypeLayout'
 import OriginalHome from './pages/OriginalHome'
+import OriginalServices from './pages/OriginalServices'
+import OriginalTelehealth from './pages/OriginalTelehealth'
+import RedesignHome from './pages/RedesignHome'
+import RedesignTelehealth from './pages/RedesignTelehealth'
+import RedesignRequest from './pages/RedesignRequest'
+import RedesignConfirmation from './pages/RedesignConfirmation'
 import PlaceholderPage from './pages/PlaceholderPage'
 
 export default function App() {
@@ -11,36 +17,12 @@ export default function App() {
 
         <Route element={<PrototypeLayout view="original" />}>
           <Route path="/original" element={<OriginalHome />} />
-          <Route
-            path="/original/services"
-            element={
-              <PlaceholderPage
-                heading="Original services"
-                summary="The services page, including the inline telehealth link, comes next."
-              />
-            }
-          />
-          <Route
-            path="/original/telehealth"
-            element={
-              <PlaceholderPage
-                heading="Original telehealth"
-                summary="The sidebar, the three ways to schedule, the form, and the FAQ come next."
-              />
-            }
-          />
+          <Route path="/original/services" element={<OriginalServices />} />
+          <Route path="/original/telehealth" element={<OriginalTelehealth />} />
         </Route>
 
         <Route element={<PrototypeLayout view="redesign" />}>
-          <Route
-            path="/redesign"
-            element={
-              <PlaceholderPage
-                heading="Redesign home"
-                summary="Find a clinic, Find a service, and Virtual visit come next. Virtual visit will be the primary action."
-              />
-            }
-          />
+          <Route path="/redesign" element={<RedesignHome />} />
           <Route
             path="/redesign/services"
             element={
@@ -50,33 +32,9 @@ export default function App() {
               />
             }
           />
-          <Route
-            path="/redesign/telehealth"
-            element={
-              <PlaceholderPage
-                heading="Redesign telehealth"
-                summary="How it works, eligibility, and the request action come next."
-              />
-            }
-          />
-          <Route
-            path="/redesign/request"
-            element={
-              <PlaceholderPage
-                heading="Request a telehealth visit"
-                summary="The request form comes next. It will not send or store anything."
-              />
-            }
-          />
-          <Route
-            path="/redesign/confirmation"
-            element={
-              <PlaceholderPage
-                heading="Request received"
-                summary="The confirmation comes next. It will say the request was received."
-              />
-            }
-          />
+          <Route path="/redesign/telehealth" element={<RedesignTelehealth />} />
+          <Route path="/redesign/request" element={<RedesignRequest />} />
+          <Route path="/redesign/confirmation" element={<RedesignConfirmation />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/original" replace />} />

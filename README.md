@@ -32,7 +32,7 @@ The template for what was accepted, rejected, or changed is [docs/ai-workflow.md
 
 ## Result
 
-The problem and audit are accepted. The app shell is in place, and the original home shows the two finders and the event banners, with no telehealth choice. The other page bodies are still placeholders. Evidence, assumptions, and hypotheses are separated in [docs/research.md](docs/research.md).
+The problem and audit are accepted. The original path runs from the home hero to Services to the telehealth request page. The redesign path runs from Virtual visit to a single request action, a form, and a confirmation that says the request was received. Evidence, assumptions, and hypotheses are separated in [docs/research.md](docs/research.md).
 
 ## Run
 

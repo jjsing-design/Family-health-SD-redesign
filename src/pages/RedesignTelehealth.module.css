@@ -1,0 +1,140 @@
+.page {
+  flex: 1;
+  background: var(--color-page);
+  color: var(--color-text);
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+}
+
+.inner {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.lead {
+  max-width: 40rem;
+  font-size: 1.125rem;
+}
+
+.section {
+  margin-top: var(--space-3xl);
+}
+
+.steps {
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--color-page);
+  border: 1px solid var(--color-border);
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-navy);
+  color: var(--color-text-on-dark);
+  font-weight: 700;
+}
+
+.stepTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.fitPanel {
+  padding: var(--space-xl);
+  background: var(--color-tan);
+  color: var(--color-text);
+}
+
+.services {
+  margin: var(--space-md) 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--space-xl);
+  row-gap: var(--space-sm);
+}
+
+.emergency {
+  margin: var(--space-lg) 0 0;
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--color-navy);
+  background: var(--color-page);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.actions {
+  margin-top: var(--space-3xl);
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-touch);
+  margin-top: var(--space-lg);
+  padding: 0 var(--space-lg);
+  background: var(--color-gold);
+  color: var(--color-text-on-gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.secondary a,
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-touch);
+  color: var(--color-navy);
+  text-underline-offset: 0.2em;
+}
+
+.linkButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.portalNote {
+  margin: var(--space-sm) 0 0;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .steps,
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .primary {
+    width: 100%;
+  }
+}
