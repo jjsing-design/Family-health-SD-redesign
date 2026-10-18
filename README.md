@@ -28,11 +28,11 @@ Not built yet. Planned, after review of the problem and audit: two routes with a
 
 This pass used the brief saved in [prompts/exploration.md](prompts/exploration.md) to scaffold the repo, sample approximate colors into `src/styles/tokens.css`, and write the problem and audit. No screens were designed.
 
-`docs/ai-workflow.md` is not written yet. That file will be a template for what was accepted, rejected, or changed. It should be filled as each piece is reviewed, not reconstructed at the end.
+The template for what was accepted, rejected, or changed is [docs/ai-workflow.md](docs/ai-workflow.md). Fill that in as each piece is reviewed.
 
 ## Result
 
-Scaffold only. React 18 and Vite run. There is no original reconstruction and no redesign yet. The app currently shows a placeholder and the required unofficial-portfolio footer.
+The problem and audit are accepted. The app shell is in place, and the original home shows the two finders and the event banners, with no telehealth choice. The other page bodies are still placeholders. Evidence, assumptions, and hypotheses are separated in [docs/research.md](docs/research.md).
 
 ## Run
 

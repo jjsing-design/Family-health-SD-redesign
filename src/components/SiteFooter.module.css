@@ -1,0 +1,17 @@
+.footer {
+  background: var(--color-navy);
+  color: var(--color-text-on-dark);
+}
+
+.text {
+  width: min(100%, var(--layout-design-width));
+  margin: 0 auto;
+  padding: var(--space-lg);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .text {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
